@@ -16,11 +16,7 @@ export default function Home() {
   // }, []);
 
   useEffect(() => {
-    alert(1);
-    // window.navigator.geolocation.getCurrentPosition(
-    //     (newPos) => setPosition(newPos),
-    //     console.error
-    //   );
+    window.$gtm = "https://gdemo.gtmdev.xyz/";
   }, []);
 
   return (
