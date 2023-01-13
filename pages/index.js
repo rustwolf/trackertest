@@ -2,10 +2,27 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import {useEffect} from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
+// global.window?.$gtm = "https://gdemo.gtmdev.xyz/";
+
 export default function Home() {
+
+  // React.useEffect(() => {
+  //   // window is accessible here.
+  //   // console.log("window.innerHeight", window.innerHeight);
+  // }, []);
+
+  useEffect(() => {
+    alert(1);
+    // window.navigator.geolocation.getCurrentPosition(
+    //     (newPos) => setPosition(newPos),
+    //     console.error
+    //   );
+  }, []);
+
   return (
     <>
       <Head>
@@ -14,10 +31,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <script async src = "/analytics.js?t=12321"></script>
-
-        <script>
-          window.$gtm = "https://gdemo.gtmdev.xyz/";
-        </script>
 
       </Head>
       <main className={styles.main}>
