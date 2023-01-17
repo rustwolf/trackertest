@@ -14,7 +14,7 @@ export default function Home() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    window.$gtm = "https://gdemo.gtmdev.xyz/";
+    window.$gtm = "https://gdemo.gtmdev.xyz";
     valueSet = true;
     setCount(1);
     
